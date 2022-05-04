@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,7 +10,12 @@ public class PlayerMovement : MonoBehaviour
     /// TO DO SLOPE MOVEMENT
     /// </summary>
 
-   // public CharacterController controller;
+    // public CharacterController controller;
+
+    [Header("Stats")]
+    public TextMeshProUGUI HealthText;
+    public float Health = 100;
+    public int Ammo;
 
     [Header("Movement")]
     public float moveSpeed;
@@ -65,7 +71,10 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
-        startYScale = transform.localScale.y; 
+        startYScale = transform.localScale.y;
+
+        //The start stats.
+        HealthText.text = Health.ToString();
     }
 
 
