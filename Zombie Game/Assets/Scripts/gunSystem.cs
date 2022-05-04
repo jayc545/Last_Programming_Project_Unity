@@ -56,7 +56,7 @@ public class gunSystem : MonoBehaviour
     }
     private void Shoot()
     {
-        Debug.Log("I'm shooting");
+        //Debug.Log("I'm shooting");
 
         readyToShoot = false;
 
@@ -71,7 +71,7 @@ public class gunSystem : MonoBehaviour
         //EnemyRaycast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range))
         {
-            Debug.Log(rayHit.collider.name);
+            //Debug.Log(rayHit.collider.name);
 
             //When you hit enemy, takes damage
 
